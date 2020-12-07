@@ -1,0 +1,40 @@
+var healing_button = {
+  id: "healing",
+  position: [5,60,8,14],
+  clickable: true,
+  shortcut: "H",
+  visible: true,
+  components: [
+    { type: "box",  position: [0,0,100,100], stroke: "#43A31A", width: 2 },
+    { type: "text", position: [10,35,80,30], color: "#CDE", value:"HEAL" },
+    { type: "text", position: [20,70,60,20], color: "#CDE", value:"[H]" }
+  ]
+};
+
+var healing_button_click = function(ship) {
+  ship.set({healing: !ship.healing});
+};
+
+this.tick = function(game) {
+  if (game.step % 15 == 0) {
+    for (let ship of game.ships) {
+      if (!ship.custom.init) {
+        ship.custom.init = true;
+        ship.setUIComponent(healing_button);
+      }
+    }
+  }
+};
+
+this.event = function(event, game) {
+  switch (event.name) {
+    case "ui_component_clicked":
+      var ship = event.ship;
+      var component = event.id;
+      if (component == "healing") {
+        healing_button_click(ship);
+      }
+      break;
+  }
+};
+```
