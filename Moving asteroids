@@ -14,3 +14,24 @@ this.tick = function(game) {
 /*
 If you put a little value to the (game.step % ...) part, a lot asteroids will spawn and your console will spam "Too many asteroids". Be careful with this.
 */
+//By Wolfan
+ 
+ OR
+ 
+ 
+ const movingAsteroid = () => {
+  return {
+    y: ~~Math.random() * this.options.map_size,
+    x: ~~Math.random() * this.options.map_size,
+    size: ~~Math.random() * 40 + 1,
+    vx: Math.random(),
+    vy: Math.random()
+  };
+};
+this.tick = function(game) {
+  if (game.step % 60 === 0) {
+    game.addAsteroid(movingAsteroid())
+  }
+}
+
+//By __
