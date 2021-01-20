@@ -1,0 +1,19 @@
+ 
+this.options = {
+  map_size: 150,
+  root_mode: "team",
+  healing_enabled: false,
+}
+var heal = function(ship) {
+  ship.set({healing: true})
+}
+this.tick = function(game) {
+  if ( game.step % 15 == 0 ) {
+    for ( let ship of game.ships ) {
+      if ( ship.custom.init !== true ) {
+        ship.custom.init = true;
+        heal(ship);
+        }
+      }
+    }
+};
