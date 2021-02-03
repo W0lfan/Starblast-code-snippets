@@ -131,8 +131,8 @@ this.options = {
   root_mode: "survival",
   weapons_store: false,
   starting_ship: 800,
-  choose_ship: [101,102],
   ships: mod_ships,
+  survival_time: 30,
 
   //Changable options:
   crystal_value: crystals_value[~~(Math.random()*crystals_value.length)],
@@ -273,7 +273,11 @@ var warning = {
         { type: "text",position:[0,45,100,40],value:"<- You can't be a healer again if you click.",color:"#CDE"}
     ]
 };
+var a = [101,102];
 
+var e = function(ship) {
+  ship.set({type: a[~~(Math.random()*a.length)]})
+}
 this.tick = function(game) {
   if (game.step % 15 === 0) {
     for (let ship of game.ships) {
@@ -339,6 +343,7 @@ this.tick = function(game) {
         ship.setUIComponent(heal_button);
         ship.setUIComponent(warning);
         ship.setUIComponent(heal_detail);
+
       }
       if ( 300 < ship.type < 400 && ship.crystals == 180) {
         ship.custom.stats = ship.stats;
