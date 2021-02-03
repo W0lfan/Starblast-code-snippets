@@ -135,7 +135,7 @@ this.options = {
   ships: mod_ships,
 
   //Changable options:
-  crystal_value: 50/*crystals_value[~~(Math.random()*crystals_value.length)]*/,
+  crystal_value: crystals_value[~~(Math.random()*crystals_value.length)],
   vocabulary: mod_vocabulary,
   map_name: mod_map_names[~~(Math.random()*mod_map_names.length)],
   soundtrack: songs[~~(Math.random()*songs.length)],
