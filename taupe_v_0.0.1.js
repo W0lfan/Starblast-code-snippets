@@ -214,6 +214,10 @@ this.tick = function(game) {
         game.custom.taupe_start = false;
         game.custom.purge_phase = false;
         game.custom.phase = "waiting_";
+        game.custom.mining = 24000;
+        game.custom.attack = 18000;
+        game.custom.taupe = 6000;
+        game.custom.purge = 6000;
         ship.custom.t8 = false;
         set_middle(ship);
         if (ship.team !== 1) {
@@ -224,7 +228,8 @@ this.tick = function(game) {
       if (ship.custom.start !== true && game.custom.close == true) {
         yeet(ship);
       }
-      if (game.custom.phase == "waiting_" && game.ships.length == 25) {
+      if (game.custom.phase == "waiting_" && game.ships.length == 1) {
+        game.custom.start_mining_phase = true;
         game.custom.phase = "mining_phase";
         ship.custom.team = "none";
         for (var i=0;i<game.ships.length;i++) {
@@ -243,10 +248,20 @@ this.tick = function(game) {
       }
     }
   }
-  if (game.step % times.taupe_start == 0 && game.custom.taupe_start !== true) {
+  if (game.step % 60 == 0) {
+    if (game.custom.phase = "mining_phase" && game.custom.mining >= 0) {
+      game.custom.mining--;
+      echo(game.custom.mining)
+    }
+    if (game.custom.phase = "attack_phase" && game.custom.attack >= 0 ) {
+      game.custom.attack--;
+    }
+  }
+  if ( game.custom.mining <= 0 ) {
     for (let ship of game.ships) {
       game.custom.close = true;
       game.custom.taupe_start = true;
+      game.custom.phase = "attack_phase";
       var game_ships_1 = game.ships.filter(ship => ship.team == 0);
       ship_taupe_1 = game_ships_1[Math.floor(Math.random() * game_ships_1.length)];
       var game_ships_2 = game.ships.filter(ship => ship.team == 1);
@@ -395,4 +410,3 @@ let intermission = function(ship, teammate1, teammate2, teammate3, teammate4, te
 game.modding.commands.test_ship = function(req) {
   game.ships[0].set({type: ship2test})
 };
-
