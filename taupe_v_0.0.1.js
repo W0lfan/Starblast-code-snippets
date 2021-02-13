@@ -47,7 +47,7 @@ var Aries_705 = (function(){var r=Function('return(function(){var model;return m
 
 var Thenpale_801 = (function(){var r=Function('return(function(){var model;return model={name:\'Thenpale\',level:8,model:1,size:1.85,specs:{shield:{capacity:[200,275],reload:[2,6]},generator:{capacity:[80,120],reload:[50,65]},ship:{mass:250,speed:[90,110],rotation:[65,80],acceleration:[60,65]}},bodies:{main:{section_segments:8,offset:{x:0,y:-20,z:0},position:{x:[0,0,0,0,0,0,0,0,0,0,0],y:[-130,-100,-70,-50,-10,30,50,80,90,90],z:[0,0,0,0,0,0,0,0,0,0,0]},width:[0,10,16,20,20,20,20,20,15,0],height:[0,5,10,10,10,10,10,10,10,0],texture:[63,3,3,3,3,2,18,4,16.9],propeller:true},cockpit:{section_segments:8,offset:{x:0,y:-20,z:2},position:{x:[0,0,0,0,0,0,0],y:[-70,-50,0,30,40],z:[0,0,0,0,0]},width:[10,15,15,15,10],height:[10,15,15,15,10],texture:[9,9,18,13,10],propeller:false},reactors:{section_segments:8,offset:{x:65,y:50,z:-12},position:{x:[-10,-10,-6,-2,-1,-0.5,0,0,0,0,0,0],y:[-70,-70,-50,-25,-5,10,30,40,50,50],z:[0,0,0,0,0,0,0,0,0,0,0,0]},width:[0,7,9,10,10,10,10,10,10,0],height:[0,7,9,10,10,10,10,10,10,0],texture:[16.5,63,4,63,13,18,4,3],angle:0,propeller:false,laser:{damage:[25,35],rate:1,type:1,speed:[170,190],number:1,angle:-10,recoil:50}},reactors1:{section_segments:12,offset:{x:65,y:100,z:-12},position:{x:[0,0,0,0,0,0,0,0,0,0,0,0],y:[-5,-5,-5,-5,-5,5,5,5,5,5],z:[0,0,0,0,0,0,0,0,0,0,0,0]},width:[0,7,9,7,7,7,7,7,7,0],height:[0,2,5,7,7,7,7,7,7,0],texture:[17,63,63,4,63,18,17,17],angle:0,propeller:true},cannons:{section_segments:8,offset:{x:20,y:-25,z:-10},position:{x:[-3,-3,-2,-1,0,0,0,0,0,0,0,0],y:[-60,-60,-45,-30,-5,40,80,100,100,0],z:[0,0,0,0,0,0,0,0,0,0,0,0]},width:[0,5,10,10,10,10,10,5,4,10],height:[0,5,10,10,10,10,10,5,4,10],texture:[17.5,4,13,4,18,4,15.9,17],propeller:true,laser:{damage:[15,25],rate:1,type:1,speed:[150,170],number:1,angle:0,recoil:50}},details:{section_segments:8,offset:{x:15,y:-25,z:0},position:{x:[0,0,0,0,0,0,0,0,0,0,0],y:[-1,-1,-1,-1,-1,1,1,1,1,1],z:[0,0,0,0,0,0,0,0,0,0,0]},width:[0,5,5,5,5,5,5,5,5,0],height:[0,5,5,5,5,5,5,5,5,0],texture:[17],propeller:false},details1:{section_segments:8,offset:{x:15,y:-20,z:0},position:{x:[0,0,0,0,0,0,0,0,0,0,0],y:[-1,-1,-1,-1,-1,1,1,1,1,1],z:[0,0,0,0,0,0,0,0,0,0,0]},width:[0,5,5,5,5,5,5,5,5,0],height:[0,5,5,5,5,5,5,5,5,0],texture:[17],propeller:false},details2:{section_segments:8,offset:{x:15,y:-15,z:0},position:{x:[0,0,0,0,0,0,0,0,0,0,0],y:[-1,-1,-1,-1,-1,1,1,1,1,1],z:[0,0,0,0,0,0,0,0,0,0,0]},width:[0,5,5,5,5,5,5,5,5,0],height:[0,5,5,5,5,5,5,5,5,0],texture:[17],propeller:false},details3:{section_segments:8,offset:{x:15,y:-10,z:0},position:{x:[0,0,0,0,0,0,0,0,0,0,0],y:[-1,-1,-1,-1,-1,1,1,1,1,1],z:[0,0,0,0,0,0,0,0,0,0,0]},width:[0,5,5,5,5,5,5,5,5,0],height:[0,5,5,5,5,5,5,5,5,0],texture:[17],propeller:false},details4:{section_segments:8,offset:{x:15,y:-5,z:0},position:{x:[0,0,0,0,0,0,0,0,0,0,0],y:[-1,-1,-1,-1,-1,1,1,1,1,1],z:[0,0,0,0,0,0,0,0,0,0,0]},width:[0,5,5,5,5,5,5,5,5,0],height:[0,5,5,5,5,5,5,5,5,0],texture:[17],propeller:false},details5:{section_segments:8,offset:{x:15,y:0,z:0},position:{x:[0,0,0,0,0,0,0,0,0,0,0],y:[-1,-1,-1,-1,-1,1,1,1,1,1],z:[0,0,0,0,0,0,0,0,0,0,0]},width:[0,5,5,5,5,5,5,5,5,0],height:[0,5,5,5,5,5,5,5,5,0],texture:[17],propeller:false},details6:{section_segments:8,offset:{x:15,y:5,z:0},position:{x:[0,0,0,0,0,0,0,0,0,0,0],y:[-1,-1,-1,-1,-1,1,1,1,1,1],z:[0,0,0,0,0,0,0,0,0,0,0]},width:[0,5,5,5,5,5,5,5,5,0],height:[0,5,5,5,5,5,5,5,5,0],texture:[17],propeller:false},details7:{section_segments:8,offset:{x:15,y:10,z:0},position:{x:[0,0,0,0,0,0,0,0,0,0,0],y:[-1,-1,-1,-1,-1,1,1,1,1,1],z:[0,0,0,0,0,0,0,0,0,0,0]},width:[0,5,5,5,5,5,5,5,5,0],height:[0,5,5,5,5,5,5,5,5,0],texture:[17],propeller:false},details8:{section_segments:8,offset:{x:15,y:15,z:0},position:{x:[0,0,0,0,0,0,0,0,0,0,0],y:[-1,-1,-1,-1,-1,1,1,1,1,1],z:[0,0,0,0,0,0,0,0,0,0,0]},width:[0,5,5,5,5,5,5,5,5,0],height:[0,5,5,5,5,5,5,5,5,0],texture:[17],propeller:false}},wings:{font:{length:[70,0],width:[70,50],angle:[0,0],position:[0,30],texture:[18],bump:{position:30,size:15},offset:{x:0,y:20,z:-10}},wings:{length:[10,20,0],width:[70,70,20],angle:[0,0,0],position:[0,5,40],texture:[4,63],bump:{position:30,size:0},offset:{x:70,y:60,z:-10}},main:{doubleside:true,offset:{x:0,y:-31,z:17},length:[0,1,1],width:[0,79,79],angle:[0,0,0],position:[0,0,0,0],texture:63,bump:{position:20,size:1}}}}}).call(this);')();return r.typespec=Object.assign({name:r.name,level:r.level,model:r.model,code:r.level*100+r.model,specs:r.specs,next:null!=r.next?r.next:void 0},JSON.parse('{"shape":[5.55,4.671,3.277,3.004,2.483,2.019,1.721,1.512,1.365,2.01,2.412,2.443,2.514,2.601,2.736,3.206,3.61,4.208,5.073,5.495,4.912,4.601,2.925,2.918,2.637,2.595,2.637,2.918,2.925,4.601,4.912,5.495,5.073,4.208,3.61,3.206,2.736,2.601,2.516,2.443,2.412,2.01,1.365,1.512,1.721,2.019,2.483,3.004,3.277,4.671],"lasers":[{"x":2.035,"y":-0.74,"z":-0.444,"angle":0,"damage":[25,35],"rate":1,"type":1,"speed":[170,190],"number":1,"spread":-10,"error":0,"recoil":50},{"x":-2.035,"y":-0.74,"z":-0.444,"angle":0,"damage":[25,35],"rate":1,"type":1,"speed":[170,190],"number":1,"spread":-10,"error":0,"recoil":50},{"x":0.629,"y":-3.145,"z":-0.37,"angle":0,"damage":[15,25],"rate":1,"type":1,"speed":[150,170],"number":1,"spread":0,"error":0,"recoil":50},{"x":-0.629,"y":-3.145,"z":-0.37,"angle":0,"damage":[15,25],"rate":1,"type":1,"speed":[150,170],"number":1,"spread":0,"error":0,"recoil":50}],"radius":5.55}')),JSON.stringify(r)})();
 
-const ship2test = 602;
+const ship2test = 610;
 
 var game_ships = [
   Fly_101,
@@ -108,31 +108,92 @@ var taupe = {
   team: 1,
 };
 
+var mod_vocabulary = [
+      { text: "You", icon:"\u004e", key:"O" },
+      { text: "Me", icon:"\u004f", key:"E" },
+      { text: "Yes", icon:"\u004c", key:"Y" },
+      { text: "No", icon:"\u002a", key:"N" },
+ 
+      { text: "Heal", icon:"\u0036", key:"H" },
+      { text: "Follow", icon:"\u0050", key:"F" },
+      { text: "Gems", icon:"\u0044", key:"M" },
+      { text: "Defend", icon:"\u0025", key:"D" },
+ 
+      { text: "Wait", icon:"\u0048", key:"T" },
+      { text: "Attack", icon:"\u0068", key:"K" },
+      { text: "Base", icon:"\u0034", key:"B" },
+      { text: "Hmm", icon:"\u004b", key:"Q" },
+ 
+      { text: "Good Game", icon:"GG", key:"G" },
+      { text: "No Prob", icon:"\u0047", key:"P" },
+      { text: "Thanks", icon:"\u0041", key:"X" },
+      { text: "Sorry", icon:"\u00a1", key:"S" }
+    ] ;
+ 
+var mod_map_names = ["Amerkati", "Arekaba 18", "Verist 5", "Acharteglo", "Aragor 2", "Hulgoa", "Koluiya"];
+var songs = ["procedurality.mp3", "argon.mp3", "red_mist.mp3","warp_drive.mp3", "crystals.mp3" ];
+var crystals_value =  [1,1.2,1.5,1.7,1.8,2,2.2,2.5,3];
 
 
 this.options = {
   root_mode: " ",
-  weapons_store: true,
+  weapons_store: false,
   starting_ship: 800,
   friendly_colors: teams.number,
   hues: teams.hues,
   map_player: 12,
   //Changable options:
-  crystal_value: 50,
+  crystal_value: 50, //crystals_value[~~(Math.random()*crystals_value.length)]
   map_size: 110,
   reset_tree: true,
   ships:game_ships,
+  map_name: mod_map_names[~~(Math.random()*mod_map_names.length)],
+  soundtrack: songs[~~(Math.random()*songs.length)],
+  vocabulary: mod_vocabulary,
 };
 
-var set_middle = function(ship) {
-  ship.set({x: 0, y: 0, idle: true});
+
+
+
+
+
+
+
+
+const t7 = 60 ; //1100
+
+
+var keep_your_ship = function(ship) {
+  if (ship.custom.t7_reached !== true) {
+    ship.set({
+      type: ship.custom.type, 
+      stats: ship.custom.stats, 
+      crystals: 720
+    });
+  }
 };
+var set_less_crystals = function(ship) {
+  if (ship.crystals > 10) {
+    ship.set({
+    crystals: ship.crystals - Math.trunc(ship.type/100), 
+    score: ship.score + Math.trunc(ship.type/100) - 1
+    });
+    ship.custom.credits+= Math.trunc(ship.type/100);
+    ship.custom.total_gems+= Math.trunc(ship.type/100);
+    ship.custom.needed_gems -= Math.trunc(ship.type/100);
+  }
+  else {
+    ship.set({crystals:  ship.crystals - 1});
+    ship.custom.total_gems+= 1;
+    ship.custom.credits+=1;
+    ship.custom.needed_gems-=1;
+  }
+};
+
 
 var stop_idle = function(ship) {
   ship.set({
     idle: false,
-    x: Math.random()*game.options.map_size*10 - game.options.map_size*5,
-    y: Math.random()*game.options.map_size*10 - game.options.map_size*5,
   });
 };
 
@@ -177,14 +238,30 @@ var set_hue = function(ship) {
   if (ship.team == 2) {
     ship.set({hue: 120});
   }  
-  if (ship.team == 3) {
-    ship.set({hue: 180});
-  }  
-  if (ship.team == 4) {
-    ship.set({hue: 240});
-  }  
 };
 
+var heal_button = {
+  id: "heal_button",
+  position: [5,70,10,20],
+  clickable: true,
+  shortcut: "H",
+  visible: true,
+  components: [
+    { type: "box",position:[0,0,100,100],stroke:"#CDE",width:10},
+    { type: "text",position:[10,10,80,30],value:"HEAL",color:"#CDE"},
+    { type: "text",position:[10,35,80,30],value:"320 gems or +",color:"#CDE"},
+    { type: "text",position:[20,70,60,20],value:"[H]",color:"#CDE"}
+    ]
+};
+
+var heal_detail = {
+  id: "heal_detail",
+  position: [3,49,15,30],
+  visible: true,
+  components: [
+    { type: "text",position:[10,35,80,50],value:"For tier 4 or more",color:"#CDE"},
+    ]
+};
 
 var times = {
   //Numbers in ticks:
@@ -201,10 +278,27 @@ var yeet = function(ship) {
      "Try to join more faster":"",
   });
 };
+
 this.tick = function(game) {
   if (game.step % 15 === 0) {
     for (let ship of game.ships) {
-      complete_text = game.ships.length + "/25 players";
+      var upgrade = {
+        id: "upgrade",
+        position: [5,30,8,14],
+        clickable: true,
+        shortcut: "W",
+        visible: true,
+        components: [
+          { type: "box",position:[0,0,100,100],stroke:"#CDE",width:2},
+          { type: "text",position:[10,15,80,30],value:"Needed gems", color:"#CDE"},
+          { type: "text",position:[10,40,80,30],value:ship.custom.needed_gems, color:"#CDE"},
+          { type: "text",position:[20,70,60,20],value:"[W]",color:"#CDE"}
+          ]
+      };
+      ship.setUIComponent(upgrade);
+      if (ship.custom.needed_gems <= 0) {
+        ship.custom.needed_gems = "DONE";
+      }
       if (ship.custom.start !== true && game.custom.close !== true) {
         ship.custom.start = true;
         ship.custom.team = "none";
@@ -214,27 +308,30 @@ this.tick = function(game) {
         game.custom.taupe_start = false;
         game.custom.purge_phase = false;
         game.custom.phase = "waiting_";
-        game.custom.mining = 10;
+        game.custom.mining = 1200;
         game.custom.attack = 900;
         game.custom.taupe = 300;
         game.custom.purge = 300;
         ship.custom.t8 = false;
-        set_middle(ship);
+        ship.custom.total_gems = 0;
+        ship.custom.credits = 0;
+        ship.custom.start_giving_gems = false;
+        ship.custom.needed_gems = t7;
+        ship.setUIComponent(heal_button);
+        ship.setUIComponent(heal_detail);
         if (ship.team !== 1) {
           start_new_team(ship);
         }
-        put_general_composition(ship, "Waiting for more players...", [0,-2,100,40], game.ships.length + "/25 players");
       }
       if (ship.custom.start !== true && game.custom.close == true) {
         yeet(ship);
       }
-      if (game.custom.phase == "waiting_" && game.ships.length == 12) {
+      if (game.custom.phase == "waiting_") {
         game.custom.start_mining_phase = true;
         game.custom.phase = "mining_phase";
         ship.custom.team = "none";
-        for (var i=0;i<game.ships.length;i++) {
+        for (var i=0 ; i < game.ships.length ; i++) {
           var ship_ = game.ships[i];
-          stop_idle(ship_);
         }
         put_general_composition(ship, "Mining phase", [22,-2,45,40], "PVP disabled");
         echo('\nMining stade started.\n');
@@ -243,8 +340,20 @@ this.tick = function(game) {
         died_finish(ship);
       }
       set_hue(ship);
-      if (ship.custom.t8 == true) {
-        set_ship_normal(ship);
+      if (ship.type > 700) {
+        ship.custom.tier = "NONE";
+      } else {
+        ship.custom.tier_next = (Math.trunc((ship.type + 100) / 100)*100);
+      }
+      if ( ship.type < 700 && ship.crystals === 720) {
+        ship.custom.stats = ship.stats;
+        ship.custom.type = ship.type;
+      }
+      if (ship.custom.needed_gems > 0 && ship.type > 700) {
+        keep_your_ship(ship);
+      }
+      if (ship.custom.needed_gems <= 0 && ship.type > 700) {
+        ship.custom.t7_reached = true;
       }
     }
   }
@@ -261,6 +370,7 @@ this.tick = function(game) {
       game.custom.close = true;
       game.custom.taupe_start = true;
       game.custom.phase = "attack_phase";
+      echo("Attack phase started")
       var game_ships_1 = game.ships.filter(ship => ship.team == 0);
       ship_taupe_1 = game_ships_1[Math.floor(Math.random() * game_ships_1.length)];
       //echo(ship_taupe_1.name);
@@ -283,6 +393,15 @@ this.tick = function(game) {
   if (game.step % times.purge_start + 1 == 0 && game.custom.purge_phase !== true ) {
     game.custom.purge_phase = true;
     set_survival_mode(ship);
+  }
+  if (game.step % 30 == 0) {
+    for (let ship of game.ships ) {
+      if (ship.custom.start_giving_gems !== false) {
+        if (ship.crystals !== 0) {
+          set_less_crystals(ship);
+        }
+      }
+    }
   }
 };
 
@@ -331,7 +450,6 @@ var set_taupe = function() {
   game.custom.team_2 = game.custom.team_2 + 1;
   ship.custom.curent_team = "taupe";
   ship.custom.team = true;
-  
 };
   
 let intermission = function(ship, teammate1, teammate2, teammate3, teammate4, teammate5) {
@@ -353,7 +471,49 @@ let intermission = function(ship, teammate1, teammate2, teammate3, teammate4, te
 
 
 
+var mined_gems = function(ship) {
+  if (ship.custom.open_store !== true) {
+    ship.custom.open_store = true;
+    ship.custom.start_giving_gems = true;
+    ship.custom.current_crystals = ship.crystals ; //This variable take the actual number of gems
+    ship.set({idle: true});
+  } 
+  else {
+    ship.custom.open_store = false;
+    ship.custom.start_giving_gems = false;
+    stop_idle(ship);
+    echo(ship.name + " has a total gems of  " + ship.custom.total_gems);
+  }
+};
+
 
 game.modding.commands.test_ship = function(req) {
-  game.ships[0].set({type: ship2test})
+  game.ships[0].set({type: ship2test, crystals: 720})
 };
+
+
+var heal = function(ship) {
+  if (ship.type > 400 && ship.crystals >= 320) {
+    ship.set({healing: !ship.lasers, crystals: ship.crystals - 320});
+  }
+};
+
+
+this.event = function(event, game) {
+  let ship = event.ship;
+  switch (event.name) {
+    case "ui_component_clicked":
+      switch (event.id) {
+        case "upgrade":
+          mined_gems(ship);
+          break;
+        case "heal_button":
+          heal(ship);
+          break;
+    }
+    break;
+  }
+};
+
+
+
