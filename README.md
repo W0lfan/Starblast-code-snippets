@@ -8,3 +8,10 @@ In this page, you can find:
 - etc.
 
 More to come!
+
+# Mods available here
+The mods available here are all from Wolfan. Please credit him when you host/modifie what he did.
+
+Current mods:
+- Mining mod - Still bugged,
+- Taupe Mod, in developement
