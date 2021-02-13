@@ -369,14 +369,16 @@ this.tick = function(game) {
       if (ship.custom.total_gems < tier_6_crystals && ship.type > 600) {
         keep_your_ship(ship);
       } 
-      if ( 600 < ship.type < 700 && ship.crystals == 720) {
+      if ( ship.type < 700 && ship.crystals === 720) {
         ship.custom.stats = ship.stats;
-        ship.custom.tier = ship.type;
-        ship.custom.crystals_for_tier_keep = 720;
+        ship.custom.type = ship.type;
       }
-      if (ship.custom.total_gems < tier_7_crystals && ship.type > 700) {
+      if (ship.custom.needed_gems > 0 && ship.type > 700) {
         keep_your_ship(ship);
-      } 
+      }
+      if (ship.custom.needed_gems <= 0 && ship.type > 700) {
+        ship.custom.t7_reached = true;
+      }
       if (ship.alive !== true) {
         ship_reduce_score(ship);
       }
