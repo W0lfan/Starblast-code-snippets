@@ -9,19 +9,6 @@
 //                              modifying this mod.
 //                            * You can change some options to play this mode more easily
 //                              or with more difficulty by changing the following numbers:     
-//                                      - Change the number of gems needed to unlock 
-//                                        the Tiers 7:                                                                                                                             
-                                             const t7 = 1110 ;         
-//                                      - Change the number of minuts, this is how
-//                                        long the mining phase is during:                                                                     
-                                              var minuts_mining = 19;
-//                                      - Change the numver of minuts, this is how 
-//                                        long the attack phase is during:                                                                                                 
-                                              var minuts_attack = 10;
-//                                      - Change the number of minuts, this is how
-//                                          long the purge phase is supposed to dure:                                                                                
-                                              var minuts_purge = 5;
-
 
 
 var Fly_101 = (function(){var r=Function('return(function(){var model;return model={name:\'Fly\',level:1,model:1,size:1.05,specs:{shield:{capacity:[75,100],reload:[2,3]},generator:{capacity:[40,60],reload:[10,15]},ship:{mass:60,speed:[125,145],rotation:[110,130],acceleration:[100,120]}},bodies:{main:{section_segments:12,offset:{x:0,y:0,z:10},position:{x:[0,0,0,0,0,0,0,0,0,0],y:[-65,-60,-50,-20,10,30,55,75,60],z:[0,0,0,0,0,0,0,0,0]},width:[0,8,10,30,25,30,18,15,0],height:[0,6,8,12,20,20,18,15,0],propeller:true,texture:[4,63,10,1,1,1,12,17]},cockpit:{section_segments:12,offset:{x:0,y:0,z:20},position:{x:[0,0,0,0,0,0,0],y:[-15,0,20,30,60],z:[0,0,0,0,0]},width:[0,13,17,10,5],height:[0,18,25,18,5],propeller:false,texture:[7,9,9,4,4]},cannon:{section_segments:6,offset:{x:0,y:-15,z:-10},position:{x:[0,0,0,0,0,0],y:[-40,-50,-20,0,20,30],z:[0,0,0,0,0,20]},width:[0,5,8,11,7,0],height:[0,5,8,11,10,0],angle:0,laser:{damage:[5,6],rate:4,type:1,speed:[160,180],number:1,error:2.5},propeller:false,texture:[3,3,10,3]}},wings:{main:{length:[60,20],width:[100,50,40],angle:[-10,10],position:[0,20,10],doubleside:true,offset:{x:0,y:10,z:5},bump:{position:30,size:20},texture:[11,63]}}}}).call(this);')();return r.typespec=Object.assign({name:r.name,level:r.level,model:r.model,code:r.level*100+r.model,specs:r.specs,next:null!=r.next?r.next:void 0},JSON.parse('{"shape":[1.368,1.368,1.093,0.965,0.883,0.827,0.791,0.767,0.758,0.777,0.847,0.951,1.092,1.667,1.707,1.776,1.856,1.827,1.744,1.687,1.525,1.415,1.335,1.606,1.603,1.578,1.603,1.606,1.335,1.415,1.525,1.687,1.744,1.827,1.856,1.776,1.707,1.667,1.654,0.951,0.847,0.777,0.758,0.767,0.791,0.827,0.883,0.965,1.093,1.368],"lasers":[{"x":0,"y":-1.365,"z":-0.21,"angle":0,"damage":[5,6],"rate":4,"type":1,"speed":[160,180],"number":1,"spread":0,"error":2.5,"recoil":0}],"radius":1.856}')),JSON.stringify(r)})();
@@ -115,11 +102,7 @@ var game_ships = [
 
 
 
-var teams = {
-  hues: [120,180,360],
-  number: 3,
-  stuff_time: 1,
-};
+
 
 var taupe = {
   team: 1,
@@ -461,7 +444,117 @@ var Planets =
 "                                                               65262995                                       \n"+
 "                                                                65533                                         \n"+
 "                                                                                                              ";
-
+var Rainforest =
+"       44    44   4                9                  7                              8            9           \n"+
+"444 4  447777477 74                775558 58 777   777   799              9555 8 8 8 558666 66666 9           \n"+
+"4  477477 744447449                9 5 8   7 5 5577 555 755               9 55868    85 866585858855          \n"+
+"447777447444777 9                  77     5585555  5555 79                555658886  58 56558 6658 5          \n"+
+"444744444747449                  777 77 8 7 35 33555 5557                59586  855 5 56 585588 6559          \n"+
+"44474747477 4                    795   75733855537 555 7                 9   56 3623856 66555856  55          \n"+
+" 774747447944                    7577  7753883 338  557                  98555  85263328 26266666689          \n"+
+"4774777744                      9555353333 7877 88555 7                    9 5 3 8 366 88 838 366 85          \n"+
+"7774479444                     9557357 7787 357 533997                     5 5855 3666625268 8666 85          \n"+
+"777774 44                     555575738    555585539                       558666666 668886666663355          \n"+
+"77444                         5 55  85 3735 55  553                        55883668668666868 622385           \n"+
+"47 9                         59  7 8575533  55555777                      8888 8 2286666 82622633359          \n"+
+"77 44                        555   73  377755755855                       5586266 6 2236652858366559          \n"+
+" 744                       7777  5 737 335 873557559                      55 6688 62868268836638596           \n"+
+" 94                         997  58  35 335  3 535 9                     9   868566668282562863 9             \n"+
+"99                          9977  85575 8 3733335375                    98 886 6366662262658 8299             \n"+
+"                             99975578585 73 5 335 55                    9   8866 8366 6633336859              \n"+
+"                               95  57573 577778553559                    858 8 568 5 5 6632 3  8             9\n"+
+"                                55559 575   535  5 5 79                  588 5 6  58333 5 538565            44\n"+
+"                                7 555 557  7558 8855579                   595 8 8 6 8855556 8889          9477\n"+
+"                                 777755555755 5  3  579                     99885666866566365659          447 \n"+
+"                                    97 5 55 38 83 75599                          59 53868  8 559         9447 \n"+
+"                                     75      855557 9                             9   5883855            94477\n"+
+"                                     979    5   99                                55  553555  9           4557\n"+
+"                                       57577  77 7                                595 555    5           49477\n"+
+"                                           9999                                    9555995559             4575\n"+
+" 339                                                                                999   99              4577\n"+
+"3333                                                        3555539                                      97757\n"+
+"3  39                                                       558555339                                  99 7  5\n"+
+"55883                                                      858888553                                  44 7  77\n"+
+" 588888                                                  98899555 5539   3339                         44474447\n"+
+"55 8 3833                                               33353555958883993  33333                     944777455\n"+
+"  5355  339                                             3555953559889 9839838899                     94  54575\n"+
+"85558855553                                             9359553873 7777 8 8  3338                    477557755\n"+
+"5 5555885 3                      339                    939958533339    388883333                   44 7757 5 \n"+
+"55 588555 5                      858                     3933355538338883 883 393                   4445757 77\n"+
+"555588885 39                    85383                 99 336 5886 333 888 83389 8                   474 757777\n"+
+"855555585559                  83338383 88             9 988 55585563663673833833                   4777475575 \n"+
+"855885555539                   35853388883833 9      9 683888  885877335556 8338                    445 77477 \n"+
+"53585555558                   853 338  8 8  3 99      88678 53885778 358858 3 833                   47577557 4\n"+
+"88355555   8                  8385 53338 88883      9 7353 87788658 5355538863 3                   49 77775474\n"+
+"5 58835885883                  395  8 8   38 3 9    93353377776 566 553555833833                   77774 5 477\n"+
+"55585358588 39                89  555533838 5839    3383 5 786535 65 5555383838 9                 47774555  7 \n"+
+"835583585358 9                39 8835853588 58 3    3 77  5687  5855763 3 7779 3 9               74475757577  \n"+
+"8 83585 858589                3   335 8858 55855    9387 558  556  5563856636 3889               74 7547757777\n"+
+" 85385855858899               3  853833883855885    9937 53 88668 66 5 85835573333              9777757577 574\n"+
+"55 883555555599              958555 388533 888 3      33583 8876 533 663855557669833           994474774475774\n"+
+"555888588555333             993 5853888 5 588  8       8333  66658 875575563676658389            9444475575757\n"+
+"355558558555339            9 535838 8 8 55888  8        3355 55365 66367677 885759389            4474 44774757\n"+
+"5858858 855 9             33355888355 3885338 33        9355 5553  3 3586878586653689              779777 7 57\n"+
+"588585 559555                  885355 5833553338        8385 38578  88   66633637883                 474455777\n"+
+"588555553333             398 88 8855585888 8 9          3388883886888378585565588833                    445557\n"+
+"3555583858                9  8883 85555 8 58 8          333333555 75775 68853597366                    7 75557\n"+
+"355583559               33 83858838855588 333           39 778737  38368555588933                        74 77\n"+
+"338855559               39383 838 85583  3553            399 3333537655 58  8993                           447\n"+
+"588 5559               9385 383333355555 559               33777755578  388 933                3          7777\n"+
+"55555939              93  5553588 85883555 93               333337885575333 33              9999             9\n"+
+" 555 93             3 353885385355538855888                    939375737 3333            3 333 93             \n"+
+"533933               3  885333385 5335 8 838                      93333333             9399339                \n"+
+"559                93  88333 88535535588858                         33         333  3333933333  9             \n"+
+"9                 9    858388588855833 33589                                  9399339383833339 33             \n"+
+"                93338 8388 385533 83538885 3                                  9333338   8  5355 3  3          \n"+
+"               9 3  3583358555355833355888 3                                3 383 3 3    355555 93            \n"+
+"               9388 558583355885555 8888 3 9                              99398  8388888  8883 9933           \n"+
+"               333388 8 8 5588885835 558 833                            3   988   3  35855 888855399          \n"+
+"               93   8   5 58583353388335 93                              393988 883 555855 5553335339         \n"+
+"               83 58 8888888  5833 88 358 3                       9393933999  3 8 585535 5  355585333         \n"+
+"               338558   533 338855 33888 3                     99933333938933338333 835355538 35533 39        \n"+
+"                3 3 5 5 8   33555 83  889                     9333333333985355555 8388383 33553553953 9       \n"+
+"               33 85355888 5888 8558 5333                   9 3 33383 8 85 8838 855 8838  88 558889533        \n"+
+"               3883  5583 383833553833333               99993939 83 8583 3 88   3585533 555 5885 35 53        \n"+
+"              33  8 8355855 38833885388338         99933333 333   388 533835 3  8885855858883535558 539       \n"+
+"              93853 35838 55 5558 85533338         9  3553533 8 355 8888388 8 38835838 3 335338833353 9       \n"+
+"              3383383388 5538 838 3 883888         9  885555 83 8 8  8 85 8888 838588855 85588855833899       \n"+
+"              3385 58  855883883338 553583         9 55 35385   5  88 85 55833 5355 83 8 53885585585333       \n"+
+"              935833 583 58 3     8 385533           585358885  55 5 8588338585533555883883535555 3533939     \n"+
+"               355   3      338 833 3 388          33 85555 88533 855 585 3 585 555838353555885358588 9       \n"+
+"                3998 85358 39883333339              9 58335833333 55558855355 3855358858335535553 5 88333     \n"+
+"                3 333 3 8 833                       99 58835 383 38 8383585 883538 3855558 55585858 3 9 3     \n"+
+"                   333 888 83                      3  9 85885 835335 385538885888388555 83335558555859 99     \n"+
+"                    3 3     39                       3 398 5955 835883 338858533883993553558553559389399      \n"+
+"8                   33  3 3339                      3 9 3855533 8 5 5 8  8888338  3388953338555583833333      \n"+
+"                            9                         38 358 8 88 858 3 855 388888385  355 58588 39  9        \n"+
+"8                    99 3  9                          3333 83588 558338538353 388 5383 8853 358 3             \n"+
+"3833                  339                              8335855595 55558383  538 8385   85 85588 9             \n"+
+"98 988                                                9 98555555 8855888835885888888883855538   3             \n"+
+"8   9  99                                             999  8 3838555533838333958353858833339 333             9\n"+
+"88 8833399                                              933883333 888 38838885 55 55888398888               38\n"+
+"5 3888 8333                                              9333 393 33355353333 33 88833333 8                388\n"+
+"533558 8 39 33                                           9399333333333333  888888888 3 88 3               8855\n"+
+"5888 88 8893 3                                                 99   333993333 89 38888                    8 58\n"+
+"3 85385888 339                                                    9 939  93  9                            3555\n"+
+"8885585555553959                                                          93                             88555\n"+
+"588 8885858 8833                                                            33                           88855\n"+
+"588385 55553553333                                                                                      889555\n"+
+"585355858 58555993                                                                                       33555\n"+
+"3 8888555  8535353                          999                                                       83588535\n"+
+"55858555888555585399                     9955333333                                                   38585335\n"+
+"58355858585 85 38859                   3 933553359 559                                           333 8  585838\n"+
+"5888 8555855833858339333               398 55  55555555                                          3998888388555\n"+
+"55855855583885585333833                3 3555555338855533                                       989 8838888535\n"+
+"5888555553888555558338933              383535885353553599                                 883   88 88855538358\n"+
+"88888 5555888358555588889              3388555558 3385  3                                 83339938535355555353\n"+
+"8888855 55588555555553888553           9 35835553853588 83                              5358333 58888555533558\n"+
+"88 8 5855555555  555555888588          3 53535555885358583                            5  333343855558333558583\n"+
+"3888 855588585853588558883333         883385585553385858589   333                   333388484435555883358555 3\n"+
+"88888588 535553355585588588 39       838335585555853353333359359399                9958834835455 35583555 3385\n"+
+"8   8888585585588558558555888        38 55555358535858535855588855539             333885348545535 558555355388\n"+
+"88  855555  55555558 55 8358       3 35358588555535583385535388558539             3833344334838358558555855853\n"+
+"538  88   558 555885 8853598       3 9335585555 8 83 8 35855858555539            33333334488835 55 5553555  33";
 
 
 var mod_vocabulary = [
@@ -485,6 +578,8 @@ var mod_vocabulary = [
   { text: "Thanks", icon:"\u0041", key:"X" },
   { text: "Sorry", icon:"\u00a1", key:"S" }
 ];
+
+
  
 var mod_map_names = [
   "Amerkati", 
@@ -509,8 +604,12 @@ var crystals_value =  [
 var mod_map = [ 
   Continent, 
   Islands, 
-  Planets 
+  Planets,
+  Rainforest
 ];
+
+//Huge thanks to Koderyori for making the RainForest map
+
 var asteroids_strength = [
   0.85,0.90,0.95,1,1.25,1.50
 ]
@@ -518,6 +617,13 @@ var asteroids_strength = [
 var lives = [
   2,3,4
 ];
+var teams = {
+  hues: [120,180,360],
+  number: 3,
+  stuff_time: 1,
+};
+var starting_name = mod_map_names[~~(Math.random()*mod_map_names.length)];
+var starting_map = mod_map[~~(Math.random()*mod_map.length)];
 
 this.options = {
   root_mode: " ",
@@ -530,10 +636,10 @@ this.options = {
   map_size: 110,
   reset_tree: true,
   ships:game_ships,
-  map_name: mod_map_names[~~(Math.random()*mod_map_names.length)],
+  map_name: starting_name,
   soundtrack: songs[~~(Math.random()*songs.length)],
   vocabulary: mod_vocabulary,
-  custom_map: mod_map[~~(Math.random()*mod_map.length)],
+  custom_map: starting_map,
   asteroids_strength: asteroids_strength[~~(Math.random()*asteroids_strength.length)],
   starting_ship_maxed: true,
   lives: lives[~~(Math.random()*lives.length)],
@@ -670,8 +776,14 @@ var yeet = function(ship) {
 };
 
 
-
-
+var set_idle = function(ship) {
+  ship.set({idle: true})
+}
+        var minuts_purge = 4;
+        var minuts_attack = 9;
+        var minuts_mining = 1;
+        const t7 = 1110 ; 
+        
 
 this.tick = function(game) {
   if (game.step === 0) {
@@ -680,14 +792,9 @@ this.tick = function(game) {
     game.custom.team_3 = 0;
     game.current_minuts;
     game.custom.seconds = 60;
+    game.custom.start_attack = false;
   }
   if (game.step % 60 == 0) {
-    if (game.custom.phase == "mining_phase" && game.custom.mining >= 0) {
-      game.custom.mining--;
-    }
-    if (game.custom.phase == "attack_phase" && game.custom.attack >= 0 ) {
-      game.custom.attack--;
-    }
     for (let ship of game.ships) {
       var timer = {
         id: "timer",
@@ -700,6 +807,7 @@ this.tick = function(game) {
           }]
       };
       ship.setUIComponent(timer);
+      stop_idle(ship);
     }
       game.custom.seconds--;
       if (game.custom.seconds == 0) {
@@ -708,7 +816,8 @@ this.tick = function(game) {
       }
       if (game.custom.seconds == 0 && game.custom.current_minuts == 0) {
         if (game.custom.phase == "mining_phase") {
-          game.custom.current_minuts = minuts_attack;
+          game.custom.current_minuts = 0 + minuts_attack;
+          game.custom.start_attack = true;
         }
         if (game.custom.phase == "attack_phase") {
           game.custom.current_minuts = minuts_purge;
@@ -743,10 +852,6 @@ this.tick = function(game) {
         game.custom.taupe_start = false;
         game.custom.purge_phase = false;
         game.custom.phase = "waiting_";
-        game.custom.mining = 1200; //1200
-        game.custom.attack = 900;//900
-        game.custom.taupe = 300;
-        game.custom.purge = 300;
         ship.custom.t8 = false;
         ship.custom.total_gems = 0;
         ship.custom.credits = 0;
@@ -754,6 +859,7 @@ this.tick = function(game) {
         ship.custom.needed_gems = t7;
         ship.setUIComponent(heal_button);
         ship.setUIComponent(heal_detail);
+        ship.setUIComponent(game_infos);
         if (ship.team !== 1) {
           start_new_team(ship);
         }
@@ -765,21 +871,12 @@ this.tick = function(game) {
         game.custom.start_mining_phase = true;
         game.custom.phase = "mining_phase";
         ship.custom.team = "none";
-        for (var i=0 ; i < game.ships.length ; i++) {
-          var ship_ = game.ships[i];
-        }
         put_general_composition(ship, "Mining phase", [22,-2,45,40], "PVP disabled", "#FFFF55");
         echo('\nMining stade started.\n');
         game.custom.current_minuts = minuts_mining;
       }
       if (ship.alive !== true) {
         died_finish(ship);
-      }
-      set_hue(ship);
-      if (ship.type > 700) {
-        ship.custom.tier = "NONE";
-      } else {
-        ship.custom.tier_next = (Math.trunc((ship.type + 100) / 100)*100);
       }
       if ( ship.type < 700 && ship.crystals === 720) {
         ship.custom.stats = ship.stats;
@@ -791,10 +888,14 @@ this.tick = function(game) {
       if (ship.custom.needed_gems <= 0 && ship.type > 700) {
         ship.custom.t7_reached = true;
       }
+      if (ship.type > 700) {
+        set_idle(ship);
+      }
     }
   }
-  if ( game.custom.mining <= 0 && game.custom.phase == "mining_phase") {
+  if ( game.custom.start_attack = true && game.custom.phase == "mining_phase") {
     for (let ship of game.ships) {
+      set_hue(ship);
       game.custom.close = true;
       game.custom.taupe_start = true;
       game.custom.phase = "attack_phase";
@@ -901,6 +1002,7 @@ var heal = function(ship) {
     ship.set({healing: !ship.healing, crystals: ship.crystals - 320});
   }
 };
+
 
 
 this.event = function(event, game) {
