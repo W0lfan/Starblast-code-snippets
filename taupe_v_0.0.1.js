@@ -644,7 +644,6 @@ this.options = {
   starting_ship_maxed: true,
   lives: lives[~~(Math.random()*lives.length)],
   release_crystal: true,
-  radar_zoom: 1.2,
   projectile_speed: 0.8,
 };
 
@@ -793,6 +792,12 @@ this.tick = function(game) {
     game.current_minuts;
     game.custom.seconds = 60;
     game.custom.start_attack = false;
+    game.custom.start_mining_phase = true;
+    game.custom.phase = "mining_phase";
+    ship.custom.team = "none";
+    put_general_composition(ship, "Mining phase", [22,-2,45,40], "PVP disabled", "#FFFF55");
+    echo('\nMining stade started.\n');
+    game.custom.current_minuts = minuts_mining;
   }
   if (game.step % 60 == 0) {
     for (let ship of game.ships) {
@@ -867,14 +872,6 @@ this.tick = function(game) {
       if (ship.custom.start !== true && game.custom.close == true) {
         yeet(ship);
       }
-      if (game.custom.phase == "waiting_") {
-        game.custom.start_mining_phase = true;
-        game.custom.phase = "mining_phase";
-        ship.custom.team = "none";
-        put_general_composition(ship, "Mining phase", [22,-2,45,40], "PVP disabled", "#FFFF55");
-        echo('\nMining stade started.\n');
-        game.custom.current_minuts = minuts_mining;
-      }
       if (ship.alive !== true) {
         died_finish(ship);
       }
@@ -892,7 +889,7 @@ this.tick = function(game) {
         set_idle(ship);
       }
     }
-  }
+  }/*
   if ( game.custom.start_attack = true && game.custom.phase == "mining_phase") {
     for (let ship of game.ships) {
       set_hue(ship);
@@ -913,7 +910,7 @@ this.tick = function(game) {
         set_new_team_no_taupe(ship);
       }
     }
-  }
+  }*/
   if (game.step % times.purge_start + 1 == 0 && game.custom.purge_phase !== true ) {
     game.custom.purge_phase = true;
     set_survival_mode(ship);
@@ -1030,4 +1027,3 @@ game.modding.commands.test_ship = function(req) {
 };
 
 
- 
