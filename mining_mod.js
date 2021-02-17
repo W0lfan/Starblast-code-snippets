@@ -1,5 +1,3 @@
-
-
 const t4 = 180 ; // 180 * 2
 const t5 = 320 ; // 320 * 2
 const t6 = 500 ; // 500 * 2
@@ -21,7 +19,7 @@ this.options = {
   survival_time: 30,
 
   //Changable options:
-  crystal_value: crystals_value[~~(Math.random()*crystals_value.length)],
+  crystal_value: /*crystals_value[~~(Math.random()*crystals_value.length)]*/50,
   map_name: mod_map_names[~~(Math.random()*mod_map_names.length)],
   soundtrack: songs[~~(Math.random()*songs.length)],
   map_id: random_map[~~(Math.random()*random_map.length)],
@@ -29,8 +27,8 @@ this.options = {
   release_crystal: true
 };
 
- 
- 
+
+
 
 var keep_your_ship = function(ship) {
   ship.set({type: ship.custom.tier, stats: ship.custom.stats, crystals: ship.custom.crystals_for_tier_keep, generator: 0});
@@ -168,6 +166,21 @@ this.tick = function(game) {
         ship.custom.t6_stats = ship.stats;
         ship.custom.t6_tier = ship.type;
       }
+      if (ship.custom.needed_gems <= 0 && ship.custom.tier_passed == 3) {
+        ship.custom.tier_passed = 4;
+        ship.custom.needed_gems = t5;
+      }
+      if (ship.custom.needed_gems <= 0 && ship.custom.tier_passed == 4) {
+        ship.custom.tier_passed = 5;
+        ship.custom.needed_gems = t6;
+      }
+      if (ship.custom.needed_gems <= 0 && ship.custom.tier_passed == 5) {
+        ship.custom.tier_passed = 6;
+        ship.custom.needed_gems = t7;
+      }
+      if (ship.custom.needed_gems <= 0 && ship.custom.tier_passed == 6) {
+        ship.custom.needed_gems = "TIER 7";
+      }
       ship.setUIComponent(credits);
       ship.setUIComponent(upgrade);
       ship.custom.ShipX = ship.x;
@@ -187,7 +200,6 @@ this.tick = function(game) {
         ship_reduce_score(ship);
         if (ship.type > 700) {
           regive_first_ship(ship);
-
         }
       }
     }
