@@ -30,7 +30,7 @@ this.options = {
 };
 
  
-
+ 
 
 var keep_your_ship = function(ship) {
   ship.set({type: ship.custom.tier, stats: ship.custom.stats, crystals: ship.custom.crystals_for_tier_keep, generator: 0});
