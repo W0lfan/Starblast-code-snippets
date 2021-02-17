@@ -1,18 +1,16 @@
 
 
-const t4 = 180 * 2 ;
-const t5 = 320 * 2 ;
-const t6 = 500 * 2 ;
-const t7 = 720 * 2 ;
-
-
-
-
-
-
+const t4 = 180 ; // 180 * 2
+const t5 = 320 ; // 320 * 2
+const t6 = 500 ; // 500 * 2
+const t7 = 720 ; // 720 * 2
+let tier_4_crystals = t4 ; 
+let tier_5_crystals = tier_4_crystals + t5 ; 
+let tier_6_crystals = tier_5_crystals + t6 ; 
+let tier_7_crystals = tier_6_crystals + t7 ;
 var mod_map_names = ["Amerkati", "Arekaba 18", "Verist 5", "Acharteglo", "Aragor 2", "Hulgoa", "Koluiya"];
 var songs = ["procedurality.mp3", "argon.mp3", "red_mist.mp3","warp_drive.mp3", "crystals.mp3" ];
-var crystals_value =  [1,1.2,1.5,1.7,1.8,2,2.2,2.5,3];
+var crystals_value =  [3,4,5];
 var random_map = [9960,9959,257,268,256];
 
 this.options = {
@@ -23,7 +21,7 @@ this.options = {
   survival_time: 30,
 
   //Changable options:
-  crystal_value: 50,
+  crystal_value: crystals_value[~~(Math.random()*crystals_value.length)],
   map_name: mod_map_names[~~(Math.random()*mod_map_names.length)],
   soundtrack: songs[~~(Math.random()*songs.length)],
   map_id: random_map[~~(Math.random()*random_map.length)],
@@ -32,39 +30,6 @@ this.options = {
 };
 
 
-/*
-  Alright, let's start the explanation.
-  Every ship need, in team mode, to mine a certain number of gems depending the current
-maximum tier of every ship in this team. So, why don't we try to recreate a sort of 
-mining system as in team mode, where the ship have to mine a certain number of crystals 
-before getting access to a new tier.
-  Here is the number of gems required to make a ship upgrading to a new tier:
-  -------------------------------------
-  |     Tier      |   Number of gems  |
-  -------------------------------------
-  |     Tier 4    |     540 gems      |
-  -------------------------------------
-  |     Tier 5    |     1000 gems     |
-  -------------------------------------
-  |     Tier 6    |     2000 gems     |
-  -------------------------------------
-  |     Tier 7    |     3000 gems     |
-  -------------------------------------
-  
-  Please, be sure to modifie these variable by adding the number you want. 
-This is, for every tier (starting at T3), the number of gems needed to 
-upgrade to a new tier:                                                                                                                                    */
-
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-let tier_4_crystals = t4 ; //Gems needed to take a Tier 4
-let tier_5_crystals = tier_4_crystals + t5 ; //Gems needed to take a Tier 5
-let tier_6_crystals = tier_5_crystals + t6 ; //Gems needed to take a Tier 6
-let tier_7_crystals = tier_6_crystals + t7 ; //Gems needed to take a Tier 7
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 var keep_your_ship = function(ship) {
@@ -87,7 +52,6 @@ var set_less_crystals = function(ship) {
     ship.custom.needed_gems-=1;
   }
 };
-
 var m9 = {
   id: "m9",
   position: [1,0,0,0],
@@ -108,8 +72,6 @@ var m0 = {
       { type: "box",position:[0,0,100,100],stroke:"#424242", fill: "#787878",width:10}
   ]
 };
-
-
 var hide_components = function(ship) {
   ship.setUIComponent({id:"cant_upgrade", visible: false});
   ship.setUIComponent({id:"m9", visible: false});
@@ -226,7 +188,6 @@ this.tick = function(game) {
     }
   }
 };
-
 var mined_gems = function(ship) {
   if (ship.custom.open_store !== true) {
     ship.custom.open_store = true;
@@ -254,8 +215,6 @@ var mined_gems = function(ship) {
     }
   }
 };
-
-
 this.event = function(event, game) {
   let ship = event.ship;
   switch (event.name) {
@@ -268,4 +227,3 @@ this.event = function(event, game) {
     break;
   }
 };
-
