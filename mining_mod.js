@@ -77,6 +77,12 @@ var hide_components = function(ship) {
   ship.setUIComponent({id:"m9", visible: false});
   ship.setUIComponent({id:"m0", visible: false});
 };
+var regive_first_ship = function(ship) {
+  ship.set({
+    type: ship.custom.t6_tier,
+    stats: ship.custom.t6_stats
+  });
+};
 this.tick = function(game) {
   if (game.step % 15 === 0) {
     for (let ship of game.ships) {
@@ -158,6 +164,10 @@ this.tick = function(game) {
           ship.setUIComponent({id:"m9", visible: false});
           ship.setUIComponent({id:"m0", visible: false});
         }
+      if (ship.type < 700 && ship.type > 600 && ship.crystals === 720) {
+        ship.custom.t6_stats = ship.stats;
+        ship.custom.t6_tier = ship.type;
+      }
       ship.setUIComponent(credits);
       ship.setUIComponent(upgrade);
       ship.custom.ShipX = ship.x;
@@ -175,6 +185,10 @@ this.tick = function(game) {
       }
       if (ship.alive !== true) {
         ship_reduce_score(ship);
+        if (ship.type > 700) {
+          regive_first_ship(ship);
+
+        }
       }
     }
   }
