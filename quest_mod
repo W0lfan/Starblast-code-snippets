@@ -1,0 +1,373 @@
+var fallen_kingdoms_map =
+"  956       976  153 347      517         6766219119126676         715      743 351  679       659  \n"+
+"88539 1  465828   739 4849 49939868  45175549113811831194557154  86893994 9484 937   828564  1 93588\n"+
+"599725538538953  9 251899629348757375547515581 192291 185515745573757843926998152 9  359835835527995\n"+
+"6369 664898543 64646452 85987 5645614574134957147  7417594314754165465 78958 25464646 345898466 9636\n"+
+"99465621158 6972268526792663851296 39 742428621944449126824247 93 6921583662976258622796 85112656499\n"+
+"346786 2422 5686596 13 48161212952258 525535 2 533335 2 535525 85225921216184 31 6956865 2242 687643\n"+
+"61961 124 381472 84 6812666359514916696249958763    3678599426966194159536662186 48 274183 421 16916\n"+
+"462792332799138498757467537 8 537669345 98 34          43 89 543966735 8 735764757894831997233297264\n"+
+"211 99298916  3231589334 281574261 513617                  716315 162475182 4339851323  61989299 112\n"+
+"3318876325944957327 65199  34862 444889571                175988444 26843  99156 7237594495236788133\n"+
+"9714797  44 6256911592265  9612457 5352776                6772535 7542169  5622951196526 44  7974179\n"+
+"893257347 1  9 1769 18934254791     3 7525                5257 3     19745243981 9671 9  1 743752398\n"+
+" 23496 275355141729 752929552138856885114                  411588658831255929257 927141553572 69432 \n"+
+" 3 458273938 6182968353564729                                          9274653538692816 839372854 3 \n"+
+"  2594976213 413422796  933                                              339  697224314 3126794952  \n"+
+"  15258 914 745221183331439                                              934133381122547 419 85251  \n"+
+"5 5814497366266812797 43765              3244          4423              56734 7972186626637944185 5\n"+
+"63373197412 8 998 216 29            287821926          629128782            92 612 899 8 21479137336\n"+
+"5197488787 68864 357 883181      675397 63162          26136 793576      181388 753 46886 7878847915\n"+
+"4 16169724746 11761939 2366    53   32827189            98172823   35    6632 93916711 64742796161 4\n"+
+"  53 8626 5 21295484853646    25358727538                  83572785352    64635848459212 5 6268 35  \n"+
+" 7829427895968 67573292789    5597133241                    1423317955    98729237576 8695987249287 \n"+
+"9288957712368  6521315915    815 88677                        77688 518    5195131256  8632177598829\n"+
+"6382966 28167 25779 19677    118 7672                          2767 811    77691 97752 76182 6692836\n"+
+"62998  7298 253951797543    94883713      51651      15615      31738849    345797159352 8927  89926\n"+
+" 457679848 5373169692962  5 4637958      194152      251491      8597364 5  2692969613735 848976754 \n"+
+" 58219624 18 192776264    351227354     1482666 6556 6662841     453722153    462677291 81 42691285 \n"+
+"679 36537 36873           5 361823      75      9779      57      328163 5           37863 73563 976\n"+
+"72373232746   48          5527666       4 1     9779     1 4       6667255          84   64723237327\n"+
+"93564 4188944361         11373 5       561                165       5 37311         1634498814 46539\n"+
+"13 8132 9581 5           87298 5       452   478    874   254       5 89278           5 1859 2318 31\n"+
+"6616 624391492          176235         79     26    62     97         532671          294193426 6166\n"+
+"1324839 53 85          23799233         64659 53766735 95646         33299732          58 35 9384231\n"+
+"3548 7 7668752        8 99696       9489 349933133331339943 9849       69699 8        2578667 7 8453\n"+
+"42571883519815       8247 179       7239661616134774316161669327       971 7428       51891538817524\n"+
+"197   74423 96      86619952        9395998 395327723593 8995939        25991668      69 32447   791\n"+
+"89911546 4533       23 8635         71 11 3153496116943513 11 17         5368 32       3354 64511998\n"+
+"371486192 458       596148         9919176 56371511517365 6719199         841695       854 291684173\n"+
+"6814326167762       11754          677562571911778877119175265776          45711       2677616234186\n"+
+"482 83 2946 7      616 8          91691897495 74899847 59479819619          8 616      7 6492 38 284\n"+
+" 627415 326 11    319963          589589478 2 81466418 2 874985985          369913    11 623 514726 \n"+
+"66997573 62746     1238          6371944362 93  9999  39 2634491736          8321     64726 37579966\n"+
+"  6724 82  647    3982          3 49663892179 96611669 97129836694 3          2893    746  28 4276  \n"+
+"554849835  5      3611       521 759869796129382    283921697968957 125       1163      5  538948455\n"+
+" 9929 446  351     412     268318 316 8 587354 8    8 453785 8 613 813862     214     153  644 9299 \n"+
+" 1381556   528    2358     963862 286 328867347      743768823 682 268369     8532    825   6551831 \n"+
+" 62316677312 38   8476     882 1 99 73728 868887    788868 82737 99 1 288     6748   83 21377661326 \n"+
+" 354996 163  83   61 8     3287484561992 19923        32991 2991654847823     8 16   38  361 699453 \n"+
+" 339477 94  759            1479 4  75 325                  523 57  4 9741            957  49 774933 \n"+
+" 992966933  499            337 96  897484                  484798  69 733            994  339669299 \n"+
+" 992966933  499            337 96  897484                  484798  69 733            994  339669299 \n"+
+" 339477 94  759            1479 4  75 325                  523 57  4 9741            957  49 774933 \n"+
+" 354996 163  83   61 8     3287484561992 19923        32991 2991654847823     8 16   38  361 699453 \n"+
+" 62316677312 38   8476     882 1 99 73728 868887    788868 82737 99 1 288     6748   83 21377661326 \n"+
+" 1381556   528    2358     963862 286 328867347      743768823 682 268369     8532    825   6551831 \n"+
+" 9929 446  351     412     268318 316 8 587354 8    8 453785 8 613 813862     214     153  644 9299 \n"+
+"554849835  5      3611       521 759869796129382    283921697968957 125       1163      5  538948455\n"+
+"  6724 82  647    3982          3 49663892179 96611669 97129836694 3          2893    746  28 4276  \n"+
+"66997573 62746     1238          6371944362 93  9999  39 2634491736          8321     64726 37579966\n"+
+" 627415 326 11    319963          589589478 2 81466418 2 874985985          369913    11 623 514726 \n"+
+"482 83 2946 7      616 8          91691897495 74899847 59479819619          8 616      7 6492 38 284\n"+
+"6814326167762       11754          677562571911778877119175265776          45711       2677616234186\n"+
+"371486192 458       596148         9919176 56371511517365 6719199         841695       854 291684173\n"+
+"89911546 4533       23 8635         71 11 3153496116943513 11 17         5368 32       3354 64511998\n"+
+"197   74423 96      86619952        9395998 395327723593 8995939        25991668      69 32447   791\n"+
+"42571883519815       8247 179       7239661616134774316161669327       971 7428       51891538817524\n"+
+"3548 7 7668752        8 99696       9489 349933133331339943 9849       69699 8        2578667 7 8453\n"+
+"1324839 53 85          23799233         64659 53766735 95646         33299732          58 35 9384231\n"+
+"6616 624391492          176235         79     26    62     97         532671          294193426 6166\n"+
+"13 8132 9581 5           87298 5       452   478    874   254       5 89278           5 1859 2318 31\n"+
+"93564 4188944361         11373 5       561                165       5 37311         1634498814 46539\n"+
+"72373232746   48          5527666       4 1     9779     1 4       6667255          84   64723237327\n"+
+"679 36537 36873           5 361823      75      9779      57      328163 5           37863 73563 976\n"+
+" 58219624 18 192776264    351227354     1482666 6556 6662841     453722153    462677291 81 42691285 \n"+
+" 457679848 5373169692962  5 4637958      194152      251491      8597364 5  2692969613735 848976754 \n"+
+"62998  7298 253951797543    94883713      51651      15615      31738849    345797159352 8927  89926\n"+
+"6382966 28167 25779 19677    118 7672                          2767 811    77691 97752 76182 6692836\n"+
+"9288957712368  6521315915    815 88677                        77688 518    5195131256  8632177598829\n"+
+" 7829427895968 67573292789    5597133241                    1423317955    98729237576 8695987249287 \n"+
+"  53 8626 5 21295484853646    25358727538                  83572785352    64635848459212 5 6268 35  \n"+
+"4 16169724746 11761939 2366    53   32827189            98172823   35    6632 93916711 64742796161 4\n"+
+"5197488787 68864 357 883181      675397 63162          26136 793576      181388 753 46886 7878847915\n"+
+"63373197412 8 998 216 29            287821926          629128782            92 612 899 8 21479137336\n"+
+"5 5814497366266812797 43765              3244          4423              56734 7972186626637944185 5\n"+
+"  15258 914 745221183331439                                              934133381122547 419 85251  \n"+
+"  2594976213 413422796  933                                              339  697224314 3126794952  \n"+
+" 3 458273938 6182968353564729                                          9274653538692816 839372854 3 \n"+
+" 23496 275355141729 752929552138856885114                  411588658831255929257 927141553572 69432 \n"+
+"893257347 1  9 1769 18934254791     3 7525                5257 3     19745243981 9671 9  1 743752398\n"+
+"9714797  44 6256911592265  9612457 5352776                6772535 7542169  5622951196526 44  7974179\n"+
+"3318876325944957327 65199  34862 444889571                175988444 26843  99156 7237594495236788133\n"+
+"211 99298916  3231589334 281574261 513617                  716315 162475182 4339851323  61989299 112\n"+
+"462792332799138498757467537 8 537669345 98 34          43 89 543966735 8 735764757894831997233297264\n"+
+"61961 124 381472 84 6812666359514916696249958763    3678599426966194159536662186 48 274183 421 16916\n"+
+"346786 2422 5686596 13 48161212952258 525535 2 533335 2 535525 85225921216184 31 6956865 2242 687643\n"+
+"99465621158 6972268526792663851296 39 742428621944449126824247 93 6921583662976258622796 85112656499\n"+
+"6369 664898543 64646452 85987 5645614574134957147  7417594314754165465 78958 25464646 345898466 9636\n"+
+"599725538538953  9 251899629348757375547515581 192291 185515745573757843926998152 9  359835835527995\n"+
+"88539 1  465828   739 4849 49939868  45175549113811831194557154  86893994 9484 937   828564  1 93588\n"+
+"  956       976  153 347      517         6766219119126676         715      743 351  679       659  ";
+
+
+
+var teams = {
+  hues: [120,360],
+  name: ["Orgono","Aternaki"],
+};
+
+this.options = {
+  // see documentation for options reference
+  root_mode: " ",
+  map_size: 100,
+  crystal_value: 50,
+  custom_map: fallen_kingdoms_map,
+  hues: teams.hues
+};
+
+
+
+var list = [
+    //Mining quests:
+    "Mine 200 gems",
+    "Mine 50 gems",
+    "Mine 100 gems",
+    "Mine a full cargo of gems",
+
+    //Attacking quests:
+    "Kill 1 player",
+    "Kill 2 players",
+    "Kill 5 players",
+
+    //Aliens quests:
+    "Kill 5 alien",
+    "kill 10 aliens",
+    "Kill 2 red candelstick",
+];
+
+var quest_infos = {
+    id: "quest_infos",
+    position: [25,-30,50,70],
+    clickable: false,
+    visible: true,
+    components: [
+      { type: "text",position:[10,35,80,50],value:"",color:"#CDE"},
+      { type: "text",position:[20,70,60,40],value:"",color:"#CDE"}
+      ]
+};
+var timer = {
+    id: "timer",
+    position: [0,12,20,40],
+    clickable: false,
+    visible: true,
+    components: [
+      { type: "text",position:[10,35,80,50],value:"",color:"#CDE"},
+      { type: "text",position:[20,70,60,40],value:"",color:"#CDE"}
+      ]
+};
+var check_mark = {
+  id: "check_mark",
+  position: [5,30,8,14],
+  clickable: true,
+  visible: true,
+  components: [
+    { type: "box",position:[0,0,100,100],stroke:"#4D9E00", fill: "#4D9E00",width:2},
+    { type: "text",position:[10,35,80,50],value:"✔",color:"#CDE"},
+    ]
+};
+var actualize_component_quest = function(quest, ship) {
+    quest_infos.components[0].value = quest;
+    ship.setUIComponent(quest_infos);
+};
+var actualize_timer = function(seconds, minuts, ship) {
+  timer.components[0].value = seconds + " : " + minuts;
+  ship.setUIComponent(timer);
+};
+
+var spawn_orgono = function(ship) {
+    ship.set({y:390, x:0});
+};
+var spawn_aternaki = function(ship) {
+    ship.set({y:-390, x:0});
+};
+var set_score = function(ship) {
+  ship.set({score: ship.custom.quests_completed});
+};
+
+var check_quest = function(ship) {
+  if (ship.custom.quest === "Kill 1 player" 
+  ||
+  ship.custom.quest === "Kill 2 player"
+  || 
+  ship.custom.quest === "Kill 5 player") {
+      ship.custom.frags = 0;
+  }
+  if (ship.custom.quest === "Kill 5 aliens" 
+  ||
+  ship.custom.quest === "Kill 10 aliens"
+  ||
+  ship.custom.quest === "Kill 2 candelstick") {
+      ship.custom.quests_completed = 0;
+  }
+};
+var start_quest = function(ship) {
+  ship.custom.quest = list[~~(Math.random()*list.length)];
+  actualize_component_quest("Current quest:" + ship.custom.quest, ship);
+  check_quest(ship);
+};
+
+var stop = function(ship) {
+  if (ship.id !== game.custom.winner) {
+    ship.gameOver({
+      "You lost" : "You'll maybe win next time!",
+      "Total quests completed" : ship.custom.quests_completed
+    });
+  }
+  else {
+    ship.gameOver({
+      "You won" : "Congratulations!",
+    });
+  }
+};
+var random = [1,2];
+this.tick = function(game) {
+    if (game.step % 15 == 0) {
+      for (let ship of game.ships) {
+        if (ship.custom.start !== true) {
+            ship.custom.start = true;
+            if (random[~~(Math.random()*random.length)] === 1) {
+              spawn_orgono(ship);
+            } else {
+              spawn_aternai(ship);
+            }
+            ship.setUIComponent(quest_infos);
+            ship.setUIComponent(timer);
+            ship.custom.time_minuts = 5;
+            ship.custom.time_quest = 300;
+            ship.custom.quests_completed = 0;
+            ship.setUIComponent(check_mark);
+            start_quest(ship);
+        }
+        set_score(ship);
+        if (ship.custom.quests_completed === 10) {
+          game.custom.winner = ship.id;
+          game.custom.stop = true;
+        }
+        if (game.custom.stop == true) {
+          stop(ship);
+        }
+      }
+      if (game.aliens.length < 7 && game.custom.chicken_number <= 6) {
+        game.addAlien({code: 10, x:0,y:0, crystal_drop: 7});
+        game.custom.chicken_number++;
+      }
+      if (game.custom.chicken_number === 6) {
+        game.addAlien({code: 14, x:0,y:0});
+        game.custom.chicken_number-=6;
+      }
+    }
+    if (game.step % 60 == 0) {
+        for (let ship of game.ships) {
+            if (ship.custom.time_seconds >= 0) {
+                ship.custom.time_seconds--;
+                actualize_timer(ship.custom.time_seconds, ship.custom.time_minuts,ship);
+                ship.custom.time_quest--;
+            } 
+            if (ship.custom.time <= 0) {
+                ship.custom.time_minuts--;
+                ship.custom.time+=59;
+                actualize_timer(ship.custom.time_seconds, ship.custom.time_minuts,ship);
+            }
+            if (ship.custom.time_quest === 0) {
+                start_quest(ship);
+                ship.custom.time_minuts+=5;
+                ship.custom.time_seconds+=59;
+                actualize_timer(ship.custom.time_seconds, ship.custom.time_minuts,ship);
+            }
+        }
+    }
+};
+
+var quest_validate = function(ship) {
+  if (ship.custom.quest === "Mine 200 gems" && ship.crystals >= 200) {
+    ship.custom.quests_completed++;
+    ship.set({crystals: ship.crystals - 200});
+  }
+  if (ship.custom.quest === "Mine 50 gems" && ship.crystals >= 50) {
+    ship.custom.quests_completed++;
+    ship.set({crystals: ship.crystals - 50});
+  }
+  if (ship.custom.quest === "Mine 100 gems" && ship.crystals >= 100) {
+    ship.custom.quests_completed++;
+    ship.set({crystals: ship.crystals - 100});
+  }
+  if (ship.custom.quest === "Mine a full cargo of gems") {
+    if (ship.type > 100 && ship.type < 200 && ship.crystals === 20) {
+      ship.custom.quests_completed++;
+      ship.set({crystals: ship.crystals - 20});
+    }
+    if (ship.type > 200 && ship.type < 300 && ship.crystals === 80) {
+      ship.custom.quests_completed++;
+      ship.set({crystals: ship.crystals - 80});
+    }
+    if (ship.type > 300 && ship.type < 400 && ship.crystals === 180) {
+      ship.custom.quests_completed++;
+      ship.set({crystals: ship.crystals - 180});
+    }
+    if (ship.type > 400 && ship.type < 500 && ship.crystals === 320) {
+      ship.custom.quests_completed++;
+      ship.set({crystals: ship.crystals - 320});
+    }
+    if (ship.type > 500 && ship.type < 600 && ship.crystals === 500) {
+      ship.custom.quests_completed++;
+      ship.set({crystals: ship.crystals - 500});
+    }
+    if (ship.type > 600 && ship.type < 700 && ship.crystals === 720) {
+      ship.custom.quests_completed++;
+      ship.set({crystals: ship.crystals - 720});
+    }
+    if (ship.type > 700 && ship.crystals === 980) {
+      ship.custom.quests_completed++;
+      ship.set({crystals: ship.crystals - 980});
+    }
+  }
+  if (ship.custom.quest === "Kill 1 player" && ship.custom.frags >= 1) {
+      ship.custom.quests_completed++;
+  }
+  if (ship.custom.quest === "Kill 2 player" && ship.custom.frags >= 2) {
+      ship.custom.quests_completed++;
+  }
+  if (ship.custom.quest === "Kill 5 player" && ship.custom.frags >= 5) {
+      ship.custom.quests_completed++;
+  }
+  if (ship.custom.quest === "Kill 5 aliens" && ship.custom.alien_killed >= 5) {
+      ship.custom.quests_completed++;
+  }
+  if (ship.custom.quest === "Kill 10 aliens" && ship.custom.alien_killed >= 10) {
+      ship.custom.quests_completed++;
+  }
+  if (ship.custom.quest === "Kill 2 candelstick" && ship.custom.alien_killed_candelstick >= 2) {
+      ship.custom.quests_completed++;
+  }
+}; 
+
+this.event = function(event, game) {
+  let ship = event.ship;
+  let alien = event.alien;
+  switch (event.name) {
+    case "ui_component_clicked":
+      switch (event.id) {
+        case "check_mark":
+          quest_validate(ship);
+          break;
+          }
+          break;
+    case "ship_destroyed":
+    if (ship !== null) {
+      if (event.killer !== null) {
+        event.killer.custom.frags++;
+      }
+    }
+          break;
+    case "alien_destroyed":
+    if (alien !== null) {
+      if (event.killer !== null && alien.code === 14) {
+        event.killer.custom.alien_killed_candelstick++;
+      }
+      if (event.killer !== null) {
+        event.killer.custom.alien_killed++;
+      }
+    }
+  }
+};
