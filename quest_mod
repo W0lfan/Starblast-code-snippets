@@ -221,6 +221,7 @@ var stop = function(ship) {
   }
 };
 var random = [1,2];
+
 this.tick = function(game) {
     if (game.step % 15 == 0) {
       for (let ship of game.ships) {
@@ -283,62 +284,78 @@ var quest_validate = function(ship) {
   if (ship.custom.quest === "Mine 200 gems" && ship.crystals >= 200) {
     ship.custom.quests_completed++;
     ship.set({crystals: ship.crystals - 200});
+    start_quest(ship);
   }
   if (ship.custom.quest === "Mine 50 gems" && ship.crystals >= 50) {
     ship.custom.quests_completed++;
     ship.set({crystals: ship.crystals - 50});
+    start_quest(ship);
   }
   if (ship.custom.quest === "Mine 100 gems" && ship.crystals >= 100) {
     ship.custom.quests_completed++;
     ship.set({crystals: ship.crystals - 100});
+    start_quest(ship);
   }
   if (ship.custom.quest === "Mine a full cargo of gems") {
     if (ship.type > 100 && ship.type < 200 && ship.crystals === 20) {
       ship.custom.quests_completed++;
       ship.set({crystals: ship.crystals - 20});
+      start_quest(ship);
     }
     if (ship.type > 200 && ship.type < 300 && ship.crystals === 80) {
       ship.custom.quests_completed++;
       ship.set({crystals: ship.crystals - 80});
+      start_quest(ship);
     }
     if (ship.type > 300 && ship.type < 400 && ship.crystals === 180) {
       ship.custom.quests_completed++;
       ship.set({crystals: ship.crystals - 180});
+      start_quest(ship);
     }
     if (ship.type > 400 && ship.type < 500 && ship.crystals === 320) {
       ship.custom.quests_completed++;
       ship.set({crystals: ship.crystals - 320});
+      start_quest(ship);
     }
     if (ship.type > 500 && ship.type < 600 && ship.crystals === 500) {
       ship.custom.quests_completed++;
       ship.set({crystals: ship.crystals - 500});
+      start_quest(ship);
     }
     if (ship.type > 600 && ship.type < 700 && ship.crystals === 720) {
       ship.custom.quests_completed++;
       ship.set({crystals: ship.crystals - 720});
+      start_quest(ship);
     }
     if (ship.type > 700 && ship.crystals === 980) {
       ship.custom.quests_completed++;
       ship.set({crystals: ship.crystals - 980});
+      start_quest(ship);
     }
   }
   if (ship.custom.quest === "Kill 1 player" && ship.custom.frags >= 1) {
       ship.custom.quests_completed++;
+      start_quest(ship);
   }
   if (ship.custom.quest === "Kill 2 player" && ship.custom.frags >= 2) {
       ship.custom.quests_completed++;
+      start_quest(ship);
   }
   if (ship.custom.quest === "Kill 5 player" && ship.custom.frags >= 5) {
       ship.custom.quests_completed++;
+      start_quest(ship);
   }
   if (ship.custom.quest === "Kill 5 aliens" && ship.custom.alien_killed >= 5) {
       ship.custom.quests_completed++;
+      start_quest(ship);
   }
   if (ship.custom.quest === "Kill 10 aliens" && ship.custom.alien_killed >= 10) {
       ship.custom.quests_completed++;
+      start_quest(ship);
   }
   if (ship.custom.quest === "Kill 2 candelstick" && ship.custom.alien_killed_candelstick >= 2) {
       ship.custom.quests_completed++;
+      start_quest(ship);
   }
 }; 
 
