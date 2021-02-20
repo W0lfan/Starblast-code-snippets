@@ -113,7 +113,8 @@ this.options = {
   map_size: 100,
   crystal_value: 50,
   custom_map: fallen_kingdoms_map,
-  hues: teams.hues
+  survival_level:7,
+  map_name: "Starblast quests mod"
 };
 
 
@@ -230,7 +231,7 @@ this.tick = function(game) {
             if (random[~~(Math.random()*random.length)] === 1) {
               spawn_orgono(ship);
             } else {
-              spawn_aternai(ship);
+              spawn_aternaki(ship);
             }
             ship.setUIComponent(quest_infos);
             ship.setUIComponent(timer);
@@ -239,6 +240,8 @@ this.tick = function(game) {
             ship.custom.quests_completed = 0;
             ship.setUIComponent(check_mark);
             start_quest(ship);
+            ship.custom.alien_killed_candelstick = 0;
+            ship.custom.alien_killed = 0;
         }
         set_score(ship);
         if (ship.custom.quests_completed === 10) {
@@ -249,34 +252,10 @@ this.tick = function(game) {
           stop(ship);
         }
       }
-      if (game.aliens.length < 7 && game.custom.chicken_number <= 6) {
+      if (game.aliens.length <10) {
         game.addAlien({code: 10, x:0,y:0, crystal_drop: 7});
-        game.custom.chicken_number++;
-      }
-      if (game.custom.chicken_number === 6) {
         game.addAlien({code: 14, x:0,y:0});
-        game.custom.chicken_number-=6;
       }
-    }
-    if (game.step % 60 == 0) {
-        for (let ship of game.ships) {
-            if (ship.custom.time_seconds >= 0) {
-                ship.custom.time_seconds--;
-                actualize_timer(ship.custom.time_seconds, ship.custom.time_minuts,ship);
-                ship.custom.time_quest--;
-            } 
-            if (ship.custom.time <= 0) {
-                ship.custom.time_minuts--;
-                ship.custom.time+=59;
-                actualize_timer(ship.custom.time_seconds, ship.custom.time_minuts,ship);
-            }
-            if (ship.custom.time_quest === 0) {
-                start_quest(ship);
-                ship.custom.time_minuts+=5;
-                ship.custom.time_seconds+=59;
-                actualize_timer(ship.custom.time_seconds, ship.custom.time_minuts,ship);
-            }
-        }
     }
 };
 
@@ -381,6 +360,7 @@ this.event = function(event, game) {
     if (alien !== null) {
       if (event.killer !== null && alien.code === 14) {
         event.killer.custom.alien_killed_candelstick++;
+        echo(event.killer.name + " has killed a candlestick : " + ship.custom.alien_killed_candelstick)
       }
       if (event.killer !== null) {
         event.killer.custom.alien_killed++;
