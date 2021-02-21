@@ -279,10 +279,18 @@ var check_quest = function(ship) {
   ||
   ship.custom.quest === "Kill 30 aliens"
   ||
-  ship.custom.quest === "Kill 10 candelstick") {
+  ship.custom.quest === "Kill 10 red candelstick") {
       ship.custom.quests_completed = 0;
       ship.custom.alien_killed_candelstick =0;
       ship.custom.alien_killed =0;
+      ship.custom.quest_alien = true;
+      ship.custom.in_center = false;
+  }
+  if (ship.custom.quest !== "Kill 20 aliens" 
+  ||
+  ship.custom.quest !== "Kill 30 aliens"
+  ||
+  ship.custom.quest !== "Kill 10 red candelstick") {
       ship.custom.quest_alien = false;
   }
 };
@@ -307,33 +315,38 @@ var stop = function(ship) {
 };
 var random = [1,2];
 var al_ship = function(ship) {
+  
       ship.set({ 
         type: aliens_quests[~~(Math.random()*aliens_quests.length)],
         crystals: 100
       })
 }
-var fly = function(ship) {
+var re_set_ship = function(ship) {
       ship.set({ 
-        type: 101,
-        crystals: 20,
-        stats: 11111111
+        type: ship.custom.tier,
+        crystals: ship.custom.crystals,
+        stats: ship.custom.stats
       })
 }
 
 this.tick = function(game) {
     if (game.step % 15 == 0) {
       for (let ship of game.ships) {
-        if (ship.x < 120 && ship.x > -120 && ship.y < 150 && ship.y > -150 && ship.custom.quest_alien !== true) {
-          al_ship(ship);
-          ship.custom.quest_alien = true;
-          ship.custom.set_t_1 = false;
-        }
-        if (
-          ship.x > 120 && ship.custom.set_t_1 !== true && ship.custom.quest_alien !== false
+        if (ship.x < 120 && ship.x > -120 && ship.y < 120 && ship.y > -120 
+        && ship.custom.quest_alien == true
+        && ship.custom.in_center == false
         ) {
-          ship.custom.set_t_1 = true;
-          ship.custom.quest_alien = false;
-          fly(ship);
+          ship.custom.stats = ship.stats;
+          ship.custom.crystals = ship.crystals;
+          ship.custom.tier = ship.type;
+          al_ship(ship);
+          ship.custom.in_center = true;
+        }
+        if (ship.x > 120 || ship.x < -120 && ship.y > 120 || ship.y < -120) {
+          if (ship.custom.in_center == true && ship.custom.quest_alien == true) {
+            ship.custom.in_center = false;
+            re_set_ship(ship);
+          }
         }
         if (ship.custom.start !== true) {
             ship.custom.start = true;
@@ -351,8 +364,11 @@ this.tick = function(game) {
             start_quest(ship);
             ship.custom.alien_killed_candelstick = 0;
             ship.custom.alien_killed = 0;
-            ship.custom.set_t_1 = false;
             ship.custom.quest_alien = false;
+            ship.custom.stats = 0;
+            ship.custom.in_center = false;
+            ship.custom.crystals = 0;
+            ship.custom.tier = 0;
         }
         set_score(ship);
         if (ship.custom.quests_completed === 10) {
