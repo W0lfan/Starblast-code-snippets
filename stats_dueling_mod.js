@@ -380,7 +380,6 @@ if (game.custom.fighters < 2) {
           x:0,
           y:0,
           stats: 11111111 * Math.trunc(ship.type /100),
-          idle: true
         });
         change_component(ship,"READY [O]", "#11A716");
         game.custom.fighters++;
@@ -395,7 +394,6 @@ if (game.custom.fighters < 2) {
           stats: 0,
           x: 500,
           y: 0,
-          idle: false
         });
         game.custom.fighters--;
       }
